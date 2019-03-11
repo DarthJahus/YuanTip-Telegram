@@ -1,0 +1,29 @@
+# cp ./yuantip.service /lib/systemd/system/yuantip.service
+# chmod 644 /lib/systemd/system/yuantip.service
+# Don't forget #!/usr/bin/python
+# chmod +x ./yuantip.py
+# systemctl daemon-reload
+# systemctl enable yuantip.service
+# systemctl start yuantip.service
+# Status:
+# systemctl status yuantip.service
+# To stop:
+# systemctl stop yuantip.service
+# To remove
+# systemctl disable yuantip.service
+
+[Unit]
+Description=YuanTipBot
+After=syslog.target
+After=network.target
+After=yuanoind.service
+
+[Service]
+Type=simple
+ExecStart=/yuanoin/yuantip-telegram/YuanTip.py
+WorkingDirectory=/yuanoin/yuantip-telegram/
+Restart=always
+RestartSec=600
+
+[Install]
+WantedBy=multi-user.target
