@@ -1,4 +1,4 @@
-## IOCTip - Yuancoin tipbot for Telegram
+## YuanTip - Yuancoin tipbot for Telegram
 > Forked from [PandaTip-Telegram](https://github.com/DarthJahus/PandaTip-Telegram), by @DarthJahus
  
 ### Dependencies 
@@ -10,7 +10,7 @@
 * `pip install emoji`
 
 
-In order to run the tip-bot, a IOCoin-Core client is needed (yuancoind). 
+In order to run the tip-bot, a Yuancoin-Core client is needed (yuancoind). 
 
 ### Configuration file
 
