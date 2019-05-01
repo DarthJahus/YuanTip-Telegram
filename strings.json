@@ -1,7 +1,7 @@
 {
 	"welcome": {
 		"en": [
-			":panda_face: Hi! This is a tipbot for Yuancoin.",
+			":wind_chime: Hi! This is a tipbot for Yuancoin.",
 			"You can use it to share Yuan with your friends."
 		]
 	},
@@ -60,7 +60,7 @@
 	"about": {
 		"en": [
 			"This is a tipbot for Yuancoin.",
-			"Made by [@DarthJahus](https://github.com/DarthJahus) and [@JustTheDoctor](https://github.com/JustTheDoctor)."
+			"Made by [@DarthJahus](https://github.com/DarthJahus)."
 		]
 	},
 	"about_public": {

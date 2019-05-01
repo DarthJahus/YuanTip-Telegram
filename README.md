@@ -50,7 +50,7 @@ Create a `config.json` **JSON** file and set up the following parameters:
 
 ### Yuancoin daemon configuration
 
-A `iocoin.conf` file is needed in data directory.
+A `yuancoin.conf` file is needed in data directory.
 
 (sample)
 
