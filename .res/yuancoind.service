@@ -19,7 +19,7 @@
 # systemctl disable yuancoind.service
 
 [Unit]
-Description=Pandacoin Deamon
+Description=YuanCoin Deamon
 After=syslog.target
 After=network.target
 
