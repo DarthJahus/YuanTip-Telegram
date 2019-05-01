@@ -16,12 +16,12 @@
 Description=YuanTipBot
 After=syslog.target
 After=network.target
-After=yuanoind.service
+After=yuancoind.service
 
 [Service]
 Type=simple
-ExecStart=/yuanoin/yuantip-telegram/YuanTip.py
-WorkingDirectory=/yuanoin/yuantip-telegram/
+ExecStart=/yuancoin/yuantip-telegram/YuanTip.py
+WorkingDirectory=/yuancoin/yuantip-telegram/
 Restart=always
 RestartSec=600
 
