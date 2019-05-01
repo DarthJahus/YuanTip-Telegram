@@ -1,0 +1,37 @@
+# assuming yuancoind binary is /yuancoin/daemon/yuancoind
+# assuming chmod+x /yuancoin/daemon/yuancoind
+#
+# Copy the service file:
+# cp ./yuancoind.service /lib/systemd/system/yuancoind.service
+# chmod 644 /lib/systemd/system/yuancoind.service
+#
+# Install service file:
+# systemctl daemon-reload
+# systemctl enable yuancoind.service
+# Run service:
+# systemctl start yuancoind.service
+# Check status:
+# systemctl status yuancoind.service
+# Stop service:
+# systemctl stop yuancoind.service
+#
+# Remove service:
+# systemctl disable yuancoind.service
+
+[Unit]
+Description=Pandacoin Deamon
+After=syslog.target
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/yuancoin/data/yuancoind.pid
+ExecStart=/yuancoin/daemon/yuancoind -daemon -staking=0 -datadir=/yuancoin/data/ -pid=yuancoind.pid -conf=yuancoin.conf
+ExecStop=/yuancoin/daemon/yuancoind stop
+ExecReload=/yuancoin/daemon/yuancoind stop ; /bin/sleep 60 ; /yuancoin/daemon/yuancoind -daemon -staking=0 -datadir=/yuancoin/data/ -pid=yuancoind.pid -conf=yuancoin.conf
+RestartSec=300
+WorkingDirectory=/yuancoin/data/
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
